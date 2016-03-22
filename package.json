@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Simple socket.io based command line client",
   "main": "bin/woosh-cli",
+  "bin": "bin/woosh-cli",
   "scripts": {
     "start": "node bin/woosh-cli"
   },
