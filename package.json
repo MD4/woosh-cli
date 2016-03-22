@@ -1,0 +1,27 @@
+{
+  "name": "woosh-cli",
+  "version": "1.0.0",
+  "description": "Simple socket.io based command line client",
+  "main": "bin/woosh-cli",
+  "scripts": {
+    "start": "node bin/woosh-cli"
+  },
+  "engines": {
+    "node": ">=5.3"
+  },
+  "author": "Martin DEQUATREMARE (https://github.com/MD4)",
+  "homepage": "https://github.com/MD4/woosh-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MD4/woosh-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MD4/woosh-cli/issues"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "cliparse": "^0.2.5",
+    "prompt": "^1.0.0",
+    "socket.io-client": "^1.4.5"
+  }
+}
