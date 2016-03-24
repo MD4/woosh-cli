@@ -24,6 +24,6 @@ function _default(callback, params) {
         )
         .emit(
             symbolReq,
-            {text: params[0]}
+            {text: params.join(' ')}
         );
 }

@@ -1,4 +1,4 @@
-var commands = require('../commands/commands');
+var commands = require('../commands/commands').commands;
 
 // exports
 

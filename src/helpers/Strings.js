@@ -10,16 +10,20 @@ function _pretty(data) {
 
 function _prettyRec(data, indent) {
     indent = indent ? indent : '';
+    if (data instanceof Array) {
+        return '\n' + data
+            .map((value) => indent + '- ' + _prettyRec(value))
+            .join('');
+    }
     if (typeof  data === 'object') {
-        return '\n' + Object
+        return '\n' + Object²
                 .keys(data)
                 .reduce(
                     (memo, key) => {
-                        return (memo + indent + '- ' + key.bold.red + ': ' + _prettyRec(data[key], indent + '   '))
+                        return (memo + indent + '* ' + key.bold.red + ': ' + _prettyRec(data[key], indent + '   '))
                     },
                     ''
                 );
-    } else {
-        return data + '\n';
     }
+    return data + '\n';
 }
