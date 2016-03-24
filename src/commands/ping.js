@@ -1,5 +1,7 @@
 var Transport = require('../core/Transport');
 
+var Strings = require('../helpers/Strings');
+
 //exports
 
 module.exports = _default;
@@ -17,7 +19,9 @@ function _default(callback) {
         .on(
             symbolRes,
             () => {
-                console.log('pong: %sms', new Date() - pingTime);
+                console.log(Strings.pretty({
+                    pong: (new Date() - pingTime) + 'ms (' + new Date() + ')'
+                }));
                 callback();
             }
         )
