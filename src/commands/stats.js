@@ -1,5 +1,7 @@
 var Transport = require('../core/Transport');
 
+var Strings = require('../helpers/Strings');
+
 //exports
 
 module.exports = _default;
@@ -16,7 +18,7 @@ function _default(callback) {
         .on(
             symbolRes,
             (data) => {
-                console.log('stats: \n', data);
+                console.log(Strings.pretty(data));
                 callback();
             }
         )
