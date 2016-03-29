@@ -1,29 +1,28 @@
 #!/usr/bin/env node
-require("colors");
+require('colors')
 
-var cliparse = require("cliparse");
-var parsers = cliparse.parsers;
+const cliparse = require('cliparse')
 
 // Commands
-var cmdConnect = require('../src/commands/connect');
+const cmdConnect = require('../src/commands/connect')
 
-var packageInfo = require('../package.json');
+const packageInfo = require('../package.json')
 
-var cliParser = cliparse.cli({
-    name: "woosh-cli",
-    description: "Woosh command line client",
+const cliParser = cliparse.cli({
+    name: 'woosh-cli',
+    description: 'Woosh command line client',
     commands: [
 
         cliparse.command(
-            "connect",
+            'connect',
             {
-                description: "Open connection to a woosh server.",
+                description: 'Open connection to a woosh server.',
                 args: [
                     cliparse.argument(
-                        "uri",
+                        'uri',
                         {
                             default: 'localhost:80',
-                            description: "Target host"
+                            description: 'Target host'
                         }
                     )
                 ]
@@ -31,9 +30,9 @@ var cliParser = cliparse.cli({
             cmdConnect
         )
     ]
-});
+})
 
 
-console.log('---\n%s \nv%s\n---'.bold, packageInfo.name, packageInfo.version);
+console.log('---\n%s \nv%s\n---'.bold, packageInfo.name, packageInfo.version)
 
-cliparse.parse(cliParser);
+cliparse.parse(cliParser)

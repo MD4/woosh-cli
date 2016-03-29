@@ -1,15 +1,15 @@
-var Transport = require('../core/Transport');
+var Transport = require('../core/Transport')
 
-var Strings = require('../helpers/Strings');
+var Strings = require('../helpers/Strings')
 
 //exports
 
-module.exports = _default;
+module.exports = _default
 
 // private
 
-const symbolReq = 'STATS';
-const symbolRes = 'STATS';
+const symbolReq = 'STATS'
+const symbolRes = 'STATS'
 
 function _default(callback) {
     Transport
@@ -18,9 +18,9 @@ function _default(callback) {
         .on(
             symbolRes,
             (data) => {
-                console.log(Strings.pretty(data));
-                callback();
+                console.log(Strings.pretty(data))
+                callback()
             }
         )
-        .emit(symbolReq);
+        .emit(symbolReq)
 }

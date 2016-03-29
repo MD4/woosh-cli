@@ -1,12 +1,12 @@
-var commandsNames = require('./commands').commandsNames;
+var commandsNames = require('./commands').commandsNames
 
-var packageInfo = require('../../package.json');
+var packageInfo = require('../../package.json')
 
-var Strings = require('../helpers/Strings');
+var Strings = require('../helpers/Strings')
 
 //exports
 
-module.exports = _default;
+module.exports = _default
 
 // private
 
@@ -18,6 +18,6 @@ function _default(callback) {
             author: packageInfo.author
         },
         commands: commandsNames
-    }));
-    callback();
+    }))
+    callback()
 }

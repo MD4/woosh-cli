@@ -1,15 +1,13 @@
-var Strings = require('../helpers/Strings');
-
-module.exports.commandsNames = [
+const commandsNames = module.exports.commandsNames = [
     'disconnect',
     'ping',
     'stats',
     'say',
     'info'
-];
+]
 
-module.exports.commands = {};
+module.exports.commands = {}
 
-this.commandsNames.forEach(
+commandsNames.forEach(
     (commandName) => module.exports.commands[commandName] = require('./' + commandName)
-);
+)
